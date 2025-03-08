@@ -19,4 +19,4 @@ jobs:
     needs: [version]
     steps:
       - name: "Print version"
-        run: echo ${{ ${{needs.version.outputs.version}} }}
+        run: echo ${{needs.version.outputs.version}}
