@@ -1,0 +1,17 @@
+on:
+  push:
+  pull_request:
+  merge_group:
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: paulhatch/semantic-version@v5
+
+  print:
+    runs-on: ubuntu-latest
+    needs: [version]
+    steps:
+      - name: "Print version"
+        run: echo ${{ needs.version.outputs.version }}
