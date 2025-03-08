@@ -40,5 +40,5 @@ jobs:
 
       - name: Tag
         run: |
-          git tag v${{needs.version.outputs.version}}
-          git push --tags
+          git tag -a v${{needs.version.outputs.version}} -m "Version ${{needs.version.outputs.version}}"
+          git push --follow-tags
