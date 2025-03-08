@@ -1,3 +1,5 @@
+name: Integration
+
 on:
   push:
   pull_request:
@@ -7,7 +9,7 @@ jobs:
   version:
     runs-on: ubuntu-latest
     steps:
-      - uses: paulhatch/semantic-version@v5
+      - uses: paulhatch/semantic-version@v5.4.0
 
   print:
     runs-on: ubuntu-latest
